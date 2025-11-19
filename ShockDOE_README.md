@@ -1,5 +1,7 @@
 ﻿# Shock-DOE-Application
 
+ - Run create_shortcuts_exe.vbs once unzipping
+
 To access web version: 
 
 
@@ -141,3 +143,4 @@ There are two options for filling out the input table:
 ## General Notes
 - If page is not filled out in Better Than Baseline, either there are no Sim IDs in column A,
     or the segments were not filled out correctly. 
+
