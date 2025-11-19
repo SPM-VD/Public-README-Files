@@ -1,5 +1,7 @@
 ## Installing Applications
 
+Access Web Version of file: 
+
 ### Recommended Setup
 1. Create a folder in your documents titled "SPM VD Apps"
 2. Select the installer zip file from the sharepoint
