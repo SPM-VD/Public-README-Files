@@ -42,7 +42,7 @@ To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c5
 
 ### 1. Load Files
 - Select File Type
-- Load Baseline and Compare Files
+- Add files to show on plot
 - Clear Plot when needed
 
 ## Bulk Conversion
@@ -59,5 +59,6 @@ To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c5
 - Click **Run Example Conversion** to run the first file from the selected folder
 - Click **Run Batch Conversion** to run the script for all files in the selected folder
     - Make sure you have the Save options selected if desired before running.
+
 
 
