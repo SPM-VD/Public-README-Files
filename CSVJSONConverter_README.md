@@ -1,4 +1,4 @@
-﻿# CSV JSON Converter
+# CSV JSON Converter
 
 To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c59ac26e91123d1e83a00dd2cc6d45dff87c/CSVJSONConverter_README.md
 
@@ -18,6 +18,8 @@ To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c5
     match the original csv due to missing offsets aquired in the original csv processing.
     Results will match the post processed version of the csv before it was converted. 
 - Plot will automatically load upon file selection
+- Legend for spring rates will show the average spring rate across the 1 -> 1.5" range
+    - If range doesn't exist, median 10 values are used. 
 
 ### 2. Input Choices
 - Save JSON/CSV File
@@ -42,7 +44,7 @@ To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c5
 
 ### 1. Load Files
 - Select File Type
-- Add files to show on plot
+- Add Files to show on plot
 - Clear Plot when needed
 
 ## Bulk Conversion
