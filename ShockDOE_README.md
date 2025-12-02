@@ -2,7 +2,7 @@
 
  - Run create_shortcuts_exe.vbs once unzipping
 
-To access web version: https://github.com/SPM-VD/Public-README-Files/blob/a908e519cc0ce2abd3b027377175af09459dec79/ShockDOE_README.md
+To access web version: [https://github.com/SPM-VD/Public-README-Files/blob/a908e519cc0ce2abd3b027377175af09459dec79/ShockDOE_README.md](https://github.com/SPM-VD/Public-README-Files/blob/main/ShockDOE_README.md)
 
 
 ![Layout](fullPage.png)
@@ -143,5 +143,6 @@ There are two options for filling out the input table:
 ## General Notes
 - If page is not filled out in Better Than Baseline, either there are no Sim IDs in column A,
     or the segments were not filled out correctly. 
+
 
 
