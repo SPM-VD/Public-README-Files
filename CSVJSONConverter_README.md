@@ -1,7 +1,7 @@
 # CSV JSON Converter
 
-To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c59ac26e91123d1e83a00dd2cc6d45dff87c/CSVJSONConverter_README.md
-
+To access web version: [https://github.com/SPM-VD/Public-README-Files/blob/9748c59ac26e91123d1e83a00dd2cc6d45dff87c/CSVJSONConverter_README.md
+](https://github.com/SPM-VD/Public-README-Files/blob/main/CSVJSONConverter_README.md)
 - Run create_shortcuts_exe.vbs once unzipping
 
 ## Single Conversion
@@ -63,6 +63,7 @@ To access web version: https://github.com/SPM-VD/Public-README-Files/blob/9748c5
     - Make sure you have the Save options selected if desired before running.
     - The Save CSV File option will save a csv in the root folder containing average spring rates
       for all springs within the directory. Option is only available for springs.
+
 
 
 
