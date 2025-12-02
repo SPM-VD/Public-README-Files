@@ -1,5 +1,5 @@
 # Balance Calculator Generator
-View Web Version here: https://github.com/SPM-VD/Public-README-Files/blob/dffd093501588a015e4b8d0e88eac859dcfdd664/BalanceCalculator_README.md
+View Web Version here: [https://github.com/SPM-VD/Public-README-Files/blob/dffd093501588a015e4b8d0e88eac859dcfdd664/BalanceCalculator_README.md](https://github.com/SPM-VD/Public-README-Files/blob/main/BalanceCalculator_README.md)
 
 Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the app
 
@@ -73,4 +73,5 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
 
 ### Sensitivity Viewer
 - Shows slope of linear curve fit from each parameter and the output outlined in the yellow box
+
 
