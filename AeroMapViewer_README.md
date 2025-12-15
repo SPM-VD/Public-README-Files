@@ -55,6 +55,10 @@ If using pre made files, follow these steps:
 - If none are found, Vegas is the default.
 - To add segments and key words, go into the _internal folder and find the segment_definitions.json
 
+- Metric outputs can be selected from the dropdown (filled in from the filtered results file)
+- Select what you would like to output and hit the button. You will be prompted to save the generated file.
+	- Use this to see the raw data/deltas for certain metric for every run. 
+
 ## Creating your own Batch File to run
 1. Open your sim file and go to the Simulation tab, then to Metric Options
 2. In the track segments box, wait for it to load after clicking and find your track. Select the 7BC option
@@ -84,6 +88,7 @@ If using pre made files, follow these steps:
 5. This will convert it into a pickle file, which is a serialized version of the data frame that python uses. This dramatically reduces the file size of all the lap data files.
 
     
+
 
 
 
