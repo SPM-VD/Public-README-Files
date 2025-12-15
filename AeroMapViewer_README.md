@@ -46,11 +46,14 @@ If using pre made files, follow these steps:
 5. Click and drag to zoom, either hit the home button in the top right of the plot area, or right click and hit Reload to reset the zoom.
 	- If plots are not showing up when refreshed, try unselecting some of the runs from the list. The plot browser can get bogged down with too many runs due to data size
 
-### Segment Definitions
+### Segment Definitions / Metric Outputs
 ![Segment Deifinitions Page](segmentDefinitionsPage.png)
 
 1. Use this page to set the segments for the Lap Data Plotter
 2. Hit the checkbox in the top left corner to toggle the lines being shown or not
+- Segment will try to be loaded based on the file name (i.e. a summary file named 25PHX2.... will load the PHX settings.
+- If none are found, Vegas is the default.
+- To add segments and key words, go into the _internal folder and find the segment_definitions.json
 
 ## Creating your own Batch File to run
 1. Open your sim file and go to the Simulation tab, then to Metric Options
@@ -81,6 +84,7 @@ If using pre made files, follow these steps:
 5. This will convert it into a pickle file, which is a serialized version of the data frame that python uses. This dramatically reduces the file size of all the lap data files.
 
     
+
 
 
 
