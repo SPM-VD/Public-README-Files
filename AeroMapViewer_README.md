@@ -1,10 +1,14 @@
 # Aero Map Explorer
 [View web version of this file](https://github.com/SPM-VD/Public-README-Files/blob/main/AeroMapViewer_README.md)
 
-- Application to view the new changes allowed with the dev C3 aero map.
+- Application to view the new changes allowed with the dev C3 and C1 Speed Sensitivity aero map.
 - DOE was ran with every possible new addition to the aero map
 	- Sim file used was [25VEG2_7_Shop Final_L15](https://spireracing.sharepoint.com/:u:/s/2024SpireRaceEngineering/IQDXBS07Ct6XT6n852Ym7wI6AdY_VDNWt_Lzx_FtPsJ6b7c?e=j6gryM)
- - List of runs is available: [Runs List](https://spireracing.sharepoint.com/:x:/s/2024SpireRaceEngineering/IQA0XPAzUzd5R6TBnOKgvSezAShNaRGbtZR_VJpSVNlQDEA?e=buezy3)
+	- [C1 Files](https://spireracing.sharepoint.com/:f:/s/2024SpireRaceEngineering/IgDO02WcdF-VS61qh0DH3AhhAS4HVzrLeK5KcRnHmlobbz4?e=SslQTx)
+	- [C3 Files](https://spireracing.sharepoint.com/:f:/s/2024SpireRaceEngineering/IgA7eifa-L79TbQn8IUrXfKvAfIRf9KXfNCdDw95KRGbKHE?e=U3hilt)
+ - List of runs is available:
+    - [C1 Runs List](https://spireracing.sharepoint.com/:f:/s/2024SpireRaceEngineering/IgA7eifa-L79TbQn8IUrXfKvAfIRf9KXfNCdDw95KRGbKHE?e=U3hilt)
+	- [C3 Runs List]([https://spireracing.sharepoint.com/:x:/s/2024SpireRaceEngineering/IQA0XPAzUzd5R6TBnOKgvSezAShNaRGbtZR_VJpSVNlQDEA?e=buezy3](https://spireracing.sharepoint.com/:x:/s/2024SpireRaceEngineering/IQB5bRjlcwDkSbW3BRFZxIp9AWyhGzp6J-_ezGFdUhTMeZg?e=NLjmuG))
 
 ## How to Use:
 
@@ -88,6 +92,7 @@ If using pre made files, follow these steps:
 5. This will convert it into a pickle file, which is a serialized version of the data frame that python uses. This dramatically reduces the file size of all the lap data files.
 
     
+
 
 
 
