@@ -11,7 +11,7 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
 - Open your sim file, assemble and setup. 
 - Click on the Setup Compare tab
 - Select all values under the Property and Current columns
-    - Keyboard shortcut is select the first row (just Property and Current), then Ctrl+Shift+DownArrow
+    - Keyboard shortcut is select the first row (just the first two columns), then Ctrl+Shift+DownArrow
 - ![SetupCompareCopy](setupcomparecopy.png)
 
 - Click "Paste Setup Compare Data"
@@ -73,5 +73,6 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
 
 ### Sensitivity Viewer
 - Shows slope of linear curve fit from each parameter and the output outlined in the yellow box
+
 
 
