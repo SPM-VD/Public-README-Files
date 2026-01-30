@@ -1,5 +1,5 @@
 # Chassis DoE Viewer/Tool
-View Web Version here: [replace](https://github.com/SPM-VD/Public-README-Files/blob/main/BalanceCalculator_README.md)
+View Web Version [here](https://github.com/SPM-VD/Public-README-Files/blob/main/ChassisDOEapp_README.md)
 
 Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the app
 
