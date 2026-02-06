@@ -31,6 +31,11 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
 - Change the number of simulations to run in the bottom right. Recommend at least 10000 for a Springs/Heights/Weights/Alignment DOE
     - For Geometry sweeps, +20000
 - Hit "Generate Batch" to save the batch file to send through the DOE system in ngSim
+- **Note:** Rule for sweeping thru frame heights and Cross
+    - Using Pre-Setup Droplink Load
+      - Leave just Hooked Frame height and Hooked Cross checked
+    - Using Post-Setup Droplink Rds
+      - Make both Unhooked and Hooked Cross, as well as Unhooked Frame Heights Checked
 
 ## Running the DOE Batch
 - Click on the Simulation tab, then Metric Options
