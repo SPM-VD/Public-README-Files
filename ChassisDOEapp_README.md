@@ -84,6 +84,7 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
     - A rank of each parameters affect is attempted using Cohen's D
     - A short description is provided in the examples section of this github repository (LINK HERE)
 
+
 ## Parallel Plot Filter
 ![parallelPlotPage](_external/readme_images/pplot.png)
 
@@ -101,6 +102,13 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
 - You can use the Re-Run Ranking button to go ahead and re rank the filtered data set, or go back and use the button on the Rank Page
     - The button on the Rank page will turn orange, indicating that there is new filtered data that the tables do not represent.
 - Once your filter values have been set, you can Save Filtered Results on the rank page to save the current filtered data set for later use
+
+### Saving & Loading Filter Dropdown Selections
+- **Save Dropdown Settings**: Click "Save Filter Selections" to save your current dropdown parameter choices (the 6 filter parameters you selected) to a template file
+    - This stores which parameters you've chosen for filtering, making it easy to reload the same configuration later
+- **Load Dropdown Settings**: Click "Load Filter Selections" to reload a previously saved dropdown configuration
+    - Quickly switch between different filtering setups without manually selecting parameters each time
+- **Use Case**: If you have standard analysis workflows (e.g., suspension-focused vs. aero-focused filtering), save those configurations and load them by name
 
 ## Setup Comparison
 ![setupCompareTables](_external/readme_images/setupCompareTables.png)
@@ -121,3 +129,77 @@ Before Use, run the "create_shortcut_exe.vbs" file to create shortcuts for the a
     - The Pearson Correlation Coefficient is a measure of linearity direction and correlation. 1 being perfectly linear, 0 being no correlation. 
         - Negative values would mean an inverse relationship. Learn more ([here](https://www.scribbr.com/statistics/pearson-correlation-coefficient/))
 - Use the dropdowns above each plot to change what is being plotted on each axis.
+
+## Rank Trends Page
+The Rank Trends page provides detailed visualization and analysis of parameter trends across the ranked simulations, including segment progression line plots and setup parameter distribution analysis.
+
+### Trend Line Plots
+- **Select Parameters & Type**: Use the dropdowns to select any output parameter and the metric type (Average, Max, RMS, etc.)
+- **Segment Selection**: Check/uncheck segments in the left panel to include them in the X-axis of the line plot
+- **Display Options**:
+    - **Show Lines**: Displays individual sim traces (top N shown in green-to-blue gradient, bottom N in red-to-orange dotted lines)
+    - **Show Top/Bottom Regions**: Shaded regions showing the envelope of top N and bottom N sims
+    - **Show Sim 1**: Overlay checkbox to display the baseline sim as a white dashed line with diamond markers
+- **Top/Bottom N Control**: Adjust the spinbox to change how many simulations to display in each region
+- **Rank Criteria in Title**: Plot titles show the ranking criteria and their weights (e.g., "Top 50 from LapTime(1.5), AeroHeight(0.5) rank")
+
+### Distribution & Violin Plots
+The page displays two distribution plots side-by-side showing setup parameter distributions across all four wheel corners (LF, RF, LR, RR):
+- **Parameter Selection**: Use the searchable dropdowns to select which setup parameters to visualize
+- **View Modes**:
+    - **Distribution Mode**: Shows KDE (Kernel Density Estimation) curves with shaded regions and rug plots for each corner
+    - **Violin Mode**: Displays violin plots with boxes, mean lines, and individual data points per corner
+- **Per-Plot Legends**: Each distribution plot has its own legend showing the corner colors (LF=blue, RF=red, LR=green, RR=orange)
+- **Sim 1 Baseline Markers**: White diamond markers overlay on dist plots showing where the baseline (Sim 1) value falls for each corner
+- **Axis Titles**: 
+    - Violin plots: X-axis = "Corner", Y-axis = parameter name
+    - Distribution plots: X-axis = parameter name, Y-axis = "Density"
+
+### Export Options
+- **Export All Plots**: Exports all trend parameters and distribution plots as a combined HTML/PDF file
+    - Line plots are arranged 2 per row with segment information
+    - Distribution plots are appended below, also 2 per row
+    - All plots include Sim 1 overlay and markers
+    - Titles include full ranking criteria and weights
+    - Special handling: BumpstopForce params use Max type if Average is not available
+- **Output Format**: Both HTML (interactive, viewable in browsers) and PDF (static, printable) are generated with matching layouts and titles
+
+## Regression
+The Regression page uses machine learning (XGBoost) to build predictive models of vehicle performance based on setup parameters, allowing you to understand parameter sensitivity and make predictions on new configurations.
+
+### Loading Data
+- **Load Test Data (Filtered Results)**: Click to select your filtered results CSV file
+    - This contains the simulation data with setup parameters and output metrics
+    - Typically the same file used in the Rank page
+- **Load Test Setups (Summary)**: Click to select the summary/test setups file
+    - Contains the baseline setup information and segment data
+    - Needed when finding regressions between setup parameters and sim outputs.
+- **Use same file for inputs checkbox**: Click when you want to train on outputs
+    - Use this when you want to see how sim outputs affect other sim metrics. 
+
+### Configure Regression
+- **Select Output Directory**: Choose where to save the trained model and regression analysis results
+- **Select Input Features (Setup Parameters)**: Check which setup parameters to use as predictors in the model
+    - Search/filter the list to find parameters quickly
+    - All checked parameters become inputs to the XGBoost model
+    - Use "Select All" and "Deselect All" buttons for quick bulk selection
+- **Select Target Metrics (Outputs)**: Check which output metrics/parameters to predict
+    - Each selected target creates a separate trained model
+- **Additional Options**:
+    - **Remove Outliers**: Checkbox to enable outlier removal during training
+    - **Plot ID**: Applies a suffix to the file name. 
+
+### Run Regression Analysis
+- Click **"Run Regression Analysis"** to begin training
+    - Status messages display progress (feature preparation, model training, evaluation)
+    - A progress bar shows training completion percentage
+    - Training time depends on dataset size and number of targets selected
+- Once complete:
+    - Trained models are saved to the output directory
+    - Feature importance rankings are generated showing which setup parameters most influence each target
+    - A summary report is created with model performance and recommendations
+
+### Interpreting Results
+- **Feature Importance**: Parameters listed first have the strongest influence on the target metric
+- **Predictions**: Once trained, models can predict outputs for new setup configurations
+    - Useful for optimization and "what-if" analysis without running full simulations
